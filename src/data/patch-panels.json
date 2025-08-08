@@ -1,0 +1,180 @@
+{
+  "defaultConfigurations": [
+    {
+      "id": "standard-single-panel",
+      "name": "Standard Single Panel",
+      "isDefault": true,
+      "panels": [
+        {
+          "id": "panel-1",
+          "number": 1,
+          "trays": [
+            {
+              "id": "tray-1",
+              "number": 1,
+              "cards": [
+                { "id": "card-A", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" },
+                { "id": "card-B", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" },
+                { "id": "card-C", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" },
+                { "id": "card-D", "type": "LCLC", "ports": 6, "linkSpeed": "40Gb" }
+              ]
+            },
+            {
+              "id": "tray-2",
+              "number": 2,
+              "cards": [
+                { "id": "card-A", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" },
+                { "id": "card-B", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" },
+                { "id": "card-C", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" },
+                { "id": "card-D", "type": "LCLC", "ports": 6, "linkSpeed": "40Gb" }
+              ]
+            },
+            {
+              "id": "tray-3",
+              "number": 3,
+              "cards": [
+                { "id": "card-A", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" },
+                { "id": "card-B", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" },
+                { "id": "card-C", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" },
+                { "id": "card-D", "type": "LCLC", "ports": 6, "linkSpeed": "40Gb" }
+              ]
+            },
+            {
+              "id": "tray-4",
+              "number": 4,
+              "cards": [
+                { "id": "card-A", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" },
+                { "id": "card-B", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" },
+                { "id": "card-C", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" },
+                { "id": "card-D", "type": "LCLC", "ports": 6, "linkSpeed": "40Gb" }
+              ]
+            },
+            {
+              "id": "tray-5",
+              "number": 5,
+              "cards": [
+                { "id": "card-A", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" },
+                { "id": "card-B", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" },
+                { "id": "card-C", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" },
+                { "id": "card-D", "type": "LCLC", "ports": 6, "linkSpeed": "40Gb" }
+              ]
+            },
+            {
+              "id": "tray-6",
+              "number": 6,
+              "cards": [
+                { "id": "card-A", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" },
+                { "id": "card-B", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" },
+                { "id": "card-C", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" },
+                { "id": "card-D", "type": "LCLC", "ports": 6, "linkSpeed": "40Gb" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dual-panel-config",
+      "name": "Dual Panel Configuration",
+      "isDefault": true,
+      "panels": [
+        {
+          "id": "panel-1",
+          "number": 1,
+          "trays": [
+            {
+              "id": "tray-1",
+              "number": 1,
+              "cards": [
+                { "id": "card-A", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" },
+                { "id": "card-B", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" },
+                { "id": "card-C", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" },
+                { "id": "card-D", "type": "LCLC", "ports": 6, "linkSpeed": "40Gb" }
+              ]
+            },
+            {
+              "id": "tray-2",
+              "number": 2,
+              "cards": [
+                { "id": "card-A", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" },
+                { "id": "card-B", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" },
+                { "id": "card-C", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" },
+                { "id": "card-D", "type": "LCLC", "ports": 6, "linkSpeed": "40Gb" }
+              ]
+            },
+            {
+              "id": "tray-3",
+              "number": 3,
+              "cards": [
+                { "id": "card-A", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" },
+                { "id": "card-B", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" },
+                { "id": "card-C", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" },
+                { "id": "card-D", "type": "LCLC", "ports": 6, "linkSpeed": "40Gb" }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "panel-2",
+          "number": 2,
+          "trays": [
+            {
+              "id": "tray-1",
+              "number": 1,
+              "cards": [
+                { "id": "card-A", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" },
+                { "id": "card-B", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" },
+                { "id": "card-C", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" },
+                { "id": "card-D", "type": "LCLC", "ports": 6, "linkSpeed": "40Gb" }
+              ]
+            },
+            {
+              "id": "tray-2",
+              "number": 2,
+              "cards": [
+                { "id": "card-A", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" },
+                { "id": "card-B", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" },
+                { "id": "card-C", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" },
+                { "id": "card-D", "type": "LCLC", "ports": 6, "linkSpeed": "40Gb" }
+              ]
+            },
+            {
+              "id": "tray-3",
+              "number": 3,
+              "cards": [
+                { "id": "card-A", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" },
+                { "id": "card-B", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" },
+                { "id": "card-C", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" },
+                { "id": "card-D", "type": "LCLC", "ports": 6, "linkSpeed": "40Gb" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "minimal-config",
+      "name": "Minimal Configuration",
+      "isDefault": true,
+      "panels": [
+        {
+          "id": "panel-1",
+          "number": 1,
+          "trays": [
+            {
+              "id": "tray-1",
+              "number": 1,
+              "cards": [
+                { "id": "card-A", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" },
+                { "id": "card-B", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" },
+                { "id": "card-C", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" },
+                { "id": "card-D", "type": "PSM4", "ports": 4, "linkSpeed": "100Gb" }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "userConfigurations": []
+}
