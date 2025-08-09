@@ -15,8 +15,11 @@ const linkSpeeds = ['40Gb', '100Gb'] as const
 
 export default function PatchPanelEditor({ initialPatchPanel, onSave, onClose }: PatchPanelEditorProps) {
   const [patchPanel, setPatchPanel] = useState<PatchPanel>(
-    initialPatchPanel || {
-      id: `custom-${Date.now()}`,
+    initialPatchPanel ? {
+      ...initialPatchPanel,
+      panels: (initialPatchPanel.panels || []).sort((a, b) => b.number - a.number)
+    } : {
+      id: (typeof crypto !== 'undefined' && 'randomUUID' in crypto) ? crypto.randomUUID() : `custom-${Date.now()}`,
       name: 'New Patch Panel Configuration',
       isDefault: false,
       panels: [
@@ -70,7 +73,7 @@ export default function PatchPanelEditor({ initialPatchPanel, onSave, onClose }:
     }
     setPatchPanel(prev => ({
       ...prev,
-      panels: [...(prev.panels || []), newPanel].sort((a, b) => a.number - b.number)
+      panels: [...(prev.panels || []), newPanel].sort((a, b) => b.number - a.number)
     }))
   }
 
@@ -120,11 +123,19 @@ export default function PatchPanelEditor({ initialPatchPanel, onSave, onClose }:
 
   const updateCard = (panelId: string, trayId: string, cardIndex: number, card: Partial<PatchPanelCard>) => {
     // Validate input data
-    const validatedCard = {
-      ...card,
-      type: card.type ? validateSelectInput(card.type, ['PSM4', 'LCLC', 'Custom']) : undefined,
-      ports: card.ports ? validateNumericInput(card.ports, 1, 24) : undefined,
-      linkSpeed: card.linkSpeed ? validateSelectInput(card.linkSpeed, ['1Gb', '10Gb', '25Gb', '40Gb', '100Gb']) : undefined
+    const validatedCard: Partial<PatchPanelCard> = {}
+    
+    if (card.type !== undefined) {
+      validatedCard.type = validateSelectInput(card.type, ['PSM4', 'LCLC', 'Type1', 'Type2']) as 'PSM4' | 'LCLC' | 'Type1' | 'Type2'
+    }
+    if (card.ports !== undefined) {
+      validatedCard.ports = validateNumericInput(card.ports, 1, 24)
+    }
+    if (card.linkSpeed !== undefined) {
+      validatedCard.linkSpeed = validateSelectInput(card.linkSpeed, ['40Gb', '100Gb']) as '40Gb' | '100Gb'
+    }
+    if (card.id !== undefined) {
+      validatedCard.id = card.id
     }
     
     setPatchPanel(prev => ({
@@ -152,8 +163,9 @@ export default function PatchPanelEditor({ initialPatchPanel, onSave, onClose }:
   const handleSave = () => {
     // If editing a default configuration, generate a new ID for the user version
     const isDefaultConfig = patchPanelService.isDefaultConfiguration(patchPanel.id)
+    const newId = (typeof crypto !== 'undefined' && 'randomUUID' in crypto) ? crypto.randomUUID() : `custom-${Date.now()}`
     const configToSave = isDefaultConfig 
-      ? { ...patchPanel, id: `custom-${Date.now()}` }
+      ? { ...patchPanel, id: newId }
       : patchPanel
     
     patchPanelService.saveUserConfiguration(configToSave)

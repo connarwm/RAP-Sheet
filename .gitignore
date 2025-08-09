@@ -58,3 +58,13 @@ jspm_packages/
 
 # Yarn Integrity file
 .yarn-integrity
+
+# Project docs to exclude
+AGENT.md
+TODO.md
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/

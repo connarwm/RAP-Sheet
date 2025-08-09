@@ -18,6 +18,12 @@
 - [ ] Add navigation bar/menu
 - [ ] Convert current functionality to multi-page structure
 
+### 5. Mileage Tracker
+- [] Create a mileage tracker that is able to use google maps integration to find the distance between addresses.
+- [] Make an address file that users can upload locally. The addresses cannot be stored online at all. The list of addresses will be provided separately as a CSV file.
+- [] Add an excel/csv export function that will export the data created.
+- [] Create an application where once the file is uploaded, it will allow users to click on two sites to determine the distance between them, and they can save that to their log to export.
+
 ## Future Enhancements
 - [ ] Add more patch panel types
 - [ ] Implement user preferences

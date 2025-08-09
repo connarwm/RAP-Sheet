@@ -91,7 +91,7 @@ export class PatchPanelService {
 
     return {
       ...defaultConfig,
-      id: `custom-${Date.now()}`,
+      id: (typeof crypto !== 'undefined' && 'randomUUID' in crypto) ? crypto.randomUUID() : `custom-${Date.now()}`,
       name: newName || `Copy of ${defaultConfig.name}`,
       isDefault: false
     }
@@ -151,10 +151,10 @@ export class PatchPanelService {
         number: tray.number,
         cards: tray.cards.filter(card => card) // Remove empty slots
       })).sort((a, b) => a.number - b.number)
-    })).sort((a, b) => a.number - b.number)
+    })).sort((a, b) => b.number - a.number)
     
     return {
-      id: `custom-${Date.now()}`,
+      id: (typeof crypto !== 'undefined' && 'randomUUID' in crypto) ? crypto.randomUUID() : `custom-${Date.now()}`,
       name,
       isDefault: false,
       panels
